@@ -11,6 +11,19 @@ package dev.study.코틀린.exam
  *  변경된 직업: 개발자
  */
 
+data class User (
+    val name: String,
+    val age: Long,
+    var job: String,
+)
+
+//fun main() {
+//    val user = User("Alice", 25, "디자이너")
+//    println("이름: ${user.name}, 나이: ${user.age}, 직업: ${user.job}")
+//    user.job = "개발자"
+//    println("이름: ${user.name}, 나이: ${user.age}, 직업: ${user.job}")
+//
+//}
 
 /**
  * 1.2 Nullable 타입과 Null Safety
@@ -18,3 +31,10 @@ package dev.study.코틀린.exam
  * - name 과 age 의 값을 출력 하되, 값이 없을 경우에 "Unknown" 과 0을 출력해주세요.
  */
 
+fun main() {
+    val name: String? = null
+    val age: Int? = null
+
+    println(name ?: "Unknown")
+    println(age ?: 0)
+}
